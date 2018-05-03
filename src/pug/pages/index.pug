@@ -1,0 +1,30 @@
+extends ../_template
+
+block variables
+  - var title = 'Odinokun`s start template'
+
+block content
+  include ../sections/header
+  
+  //begin content
+  section.main
+    .container-lg
+      .parallax-wrap
+        .parallax-decor.parallax-decor--left
+          svg
+            use(xlink:href="assets/img/sprite.svg#decor")
+        .parallax#parallax
+          .parallax__bg.parallax__bg--03(data-depth="0.1")
+            .parallax__bg-inn
+          .parallax__bg.parallax__bg--text
+            h2.parallax__title EFT
+          .parallax__bg.parallax__bg--02
+            .parallax__bg-inn
+          .parallax__bg.parallax__bg--01(data-depth="-0.3")
+            .parallax__bg-inn
+        .parallax-decor.parallax-decor--right
+          svg
+            use(xlink:href="assets/img/sprite.svg#decor")
+  //end content
+
+  //include ../sections/footer
