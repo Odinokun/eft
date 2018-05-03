@@ -1,8 +1,21 @@
 .header {
-  height: 80px;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 10;
+  top: 0;
+  right: 0;
+  background-color: #f9f8f7;
+  left: 0;
+  .container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+}
+.header-logo {
+  svg {
+    width: 195px;
+    height: 36px;
+
+    fill: $brand;
+  }
 }

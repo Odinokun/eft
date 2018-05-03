@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-  - var title = 'Odinokun`s start template'
+  - var title = 'EFT group'
 
 block content
   include ../sections/header
@@ -9,8 +9,12 @@ block content
   //begin content
   section.main
     .container-lg
+      //begin parallax
       .parallax-wrap
         .parallax-decor.parallax-decor--left
+          svg
+            use(xlink:href="assets/img/sprite.svg#decor")
+        .parallax-decor.parallax-decor--right
           svg
             use(xlink:href="assets/img/sprite.svg#decor")
         .parallax#parallax
@@ -22,9 +26,21 @@ block content
             .parallax__bg-inn
           .parallax__bg.parallax__bg--01(data-depth="-0.3")
             .parallax__bg-inn
-        .parallax-decor.parallax-decor--right
-          svg
-            use(xlink:href="assets/img/sprite.svg#decor")
+        .parallax-footer
+          .parallax-footer__text
+            span
+              |Простые решения
+              br
+              |для сада под ключ
+          a(href="#second-section").parallax-footer__btn
+            svg
+              use(xlink:href="assets/img/sprite.svg#arrow")
+
+      //end   parallax
+
+
+    .container-lg#second-section(style="text-align:center;height:900px;")
+      h1 EFT group
   //end content
 
-  //include ../sections/footer
+  include ../sections/footer

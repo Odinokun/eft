@@ -1,0 +1,115 @@
+.footer-top {
+  background-color: #363636;
+  .container {
+    display: flex;
+    //flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+.footer-top__item {
+  width: 33.33%;
+  padding: 30px;
+}
+.footer-top__item--brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 350px;
+  .footer-top__item-col {
+    width: 33.33%;
+    padding-right: 10px;
+  }
+}
+.footer-top__item--directions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 550px;
+  .footer-top__item-col {
+    width: 50%;
+    padding-right: 5px;
+  }
+}
+.footer-top__item--contacts {
+  width: 240px;
+}
+.footer-top__item-header {
+  width: 100%;
+}
+.footer-top__title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.footer-top__link {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 10px;
+  transition: .5s;
+  opacity: .2;
+  color: #fff;
+  &:hover {
+    opacity: 1;
+    color: #fff;
+  }
+}
+
+.footer-top__link-phone {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+.footer-top__link-adress {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: .5s;
+  opacity: .2;
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    opacity: 1;
+    color: #fff;
+  }
+}
+.footer-top__link-mail {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  transition: color .5s;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
+.footer-bottom {
+  background-color: #2b2b2b;
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.footer-bottom__copyright {
+  padding: 25px 30px 20px 30px;
+  span,
+  a {
+    font-size: 12px;
+    opacity: .2;
+    color: #fff;
+  }
+}
