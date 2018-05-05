@@ -1,12 +1,5 @@
 extends ../_template
 
-mixin test__item(bgImg, title)
-  .services__item(style="height: 100px; width: 25%; border: 1px solid #693;text-align:center;display:inline-block;")
-    .services__pic(style=`${bgImg}`)
-    .services__icon
-    h3.services__title #{title}
-    a(href="#").services__link
-
 block variables
   - var title = 'Inner'
   - var pageHeaderTitle = 'Внутренняя страница'
@@ -17,10 +10,6 @@ block content
   //begin content
   section.main
     .container
-      .test-mixins(style="display:flex; justify-content: space-between;")
-        +test__item('background-image:url(assets/img/favicon.png);', 'hello world 1')
-        +test__item('background-image:url(assets/img/favicon.png);', 'hello world 2')
-        +test__item('background-image:url(assets/img/favicon.png);', 'hello world 3')
       h1 Заголовок 1
       h2 Заголовок 2
       h3 Заголовок 3

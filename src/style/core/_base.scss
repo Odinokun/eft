@@ -134,27 +134,27 @@ svg {
   position: relative;
   flex: 1 0 auto;
   padding-top: 80px;
+  padding-bottom: 30px;
   background-color: #f9f8f7;
 }
 .container-lg {
   width: 100%;
-  max-width: 1720px;
+  max-width: 1760px;
   margin: 0 auto;
-  padding: 0 20px;
-
-  @include max(425) {
-    padding: 0 10px;
-  }
+  padding: 0 40px;
+}
+.container-sm {
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 65px;
 }
 .container {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1360px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 
-  @include max(425) {
-    padding: 0 10px;
-  }
 }
 .header,
 .page-header,

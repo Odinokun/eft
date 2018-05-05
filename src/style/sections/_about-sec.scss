@@ -1,0 +1,157 @@
+.about-sec {
+  margin-bottom: 50px;
+  .container {
+    position: relative;
+    padding-top: 90px;
+  }
+  .section-title {
+    top: 135px;
+  }
+  .container-sm {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.section-title {
+  position: absolute;
+  left: 0;
+  transform: rotate(-90deg);
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: .5;
+    color: #0f0f0f;
+  }
+}
+
+
+.about-sec__text {
+  width: 50%;
+  padding-right: 35px;
+}
+.about-sec__text-text {
+  &.animated {
+    animation-delay: .2s;
+  }
+  p {
+    font-size: 14px;
+    max-width: 350px;
+    opacity: 0;
+    color: #0f0f0f;
+  }
+}
+.about-sec__title {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  opacity: 0;
+  color: #0f0f0f;
+}
+.about-sec__pic {
+  width: 50%;
+  opacity: 0;
+  &.animated {
+    animation-delay: .4s;
+  }
+}
+.about-sec__pic-wrap {
+  position: relative;
+  width: 465px;
+  height: 465px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  &.active {
+    &::before {
+      animation: picWrapDecorHeight 1s 1s ease forwards;
+    }
+    &::after {
+      animation: picWrapDecorWidth 1s 1s ease forwards;
+    }
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: #c5c5c5;
+  }
+  &::before {
+    bottom: -20px;
+    left: -10px;
+    width: 1px;
+    height: 0;
+  }
+  &::after {
+    bottom: -10px;
+    left: -20px;
+    width: 0;
+    height: 1px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+@keyframes picWrapDecorWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 190px;
+  }
+}
+@keyframes picWrapDecorHeight {
+  from {
+    height: 0;
+  }
+  to {
+    height: 190px;
+  }
+}
+
+.about-sec__decor {
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 11px;
+  height: calc(100% - 30px);
+  transform: rotate(180deg);
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    margin: auto;
+    content: '';
+    background-color: #c5c5c5;
+  }
+  svg {
+    position: relative;
+    z-index: 1;
+    width: 11px;
+    height: 59px;
+    background-color: #f9f8f7;
+
+    fill: #c5c5c5;
+  }
+  span {
+    font-size: 14px;
+    z-index: 5;
+    display: block;
+    width: 300px;
+    margin-top: auto;
+    padding-left: 20px;
+    transform: translateY(-135px) rotate(90deg) ;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #0f0f0f;
+    background-color: #f9f8f7;
+  }
+}

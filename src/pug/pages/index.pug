@@ -1,46 +1,64 @@
 extends ../_template
 
+mixin directions-sec__item(pic, title)
+  a(href="#").directions-sec__item
+    .directions-sec__icon
+      svg
+        use(xlink:href='assets/img/sprite.svg#directions-' + pic + '')
+    span.directions-sec__text #{title}
+
 block variables
   - var title = 'EFT group'
 
 block content
+
+  //include ../elements/preloader
   include ../sections/header
-  
+
   //begin content
   section.main
     .container-lg
-      //begin parallax
-      .parallax-wrap
-        .parallax-decor.parallax-decor--left
-          svg
-            use(xlink:href="assets/img/sprite.svg#decor")
-        .parallax-decor.parallax-decor--right
-          svg
-            use(xlink:href="assets/img/sprite.svg#decor")
-        .parallax#parallax
-          .parallax__bg.parallax__bg--03(data-depth="0.1")
-            .parallax__bg-inn
-          .parallax__bg.parallax__bg--text
-            h2.parallax__title EFT
-          .parallax__bg.parallax__bg--02
-            .parallax__bg-inn
-          .parallax__bg.parallax__bg--01(data-depth="-0.3")
-            .parallax__bg-inn
-        .parallax-footer
-          .parallax-footer__text
-            span
-              |Простые решения
-              br
-              |для сада под ключ
-          a(href="#second-section").parallax-footer__btn
-            svg
-              use(xlink:href="assets/img/sprite.svg#arrow")
+      include ../sections/parallax
 
-      //end   parallax
+      //begin about-sec
+      section.about-sec#about-sec
+        .container
+          .section-title
+            span О компании
+          .container-sm
+            .about-sec__decor
+              svg
+                use(xlink:href="assets/img/sprite.svg#decor")
+              span более 100 реализованных проектов
+            .about-sec__text
+              h2.about-sec__title.animated EFT Group занимается обеспечением полного  цикла фермерских работ -  от семян до готовой продукции
+              .about-sec__text-text.animated
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            .about-sec__pic.animated
+              .about-sec__pic-wrap
+                img(src="assets/img/about-sec.jpg" alt="EFT")
 
-
-    .container-lg#second-section(style="text-align:center;height:900px;")
-      h1 EFT group
+      //end   about-sec
+        
+      //begin .directions-sec
+      section.directions-sec
+        .container
+          .section-title
+            span О компании
+          .container-sm
+            header.directions-sec__header
+              h2.directions-sec__header-title Наши направления
+            .directions-sec__list
+              +directions-sec__item('01', 'Комплектующие для закладки сада, ягодника на шпалере')
+              +directions-sec__item('02', 'Элитные саженцы')
+              +directions-sec__item('03', 'Техника для садов и ягодников')
+              +directions-sec__item('04', 'Регуляторы роста растений')
+              +directions-sec__item('05', 'Защита сада и ягодника от града и заморозков')
+              +directions-sec__item('06', 'Капельное орошение')
+              +directions-sec__item('07', 'Оборудование для сбора и переработки фундука и грецкого ореха')
+              +directions-sec__item('08', 'Переработка и хранение урожая')
+              +directions-sec__item('09', 'Оборудование для изготовления соков прямого отжима, сидра, пюре, джемов')
+      //end   .directions-sec
   //end content
 
   include ../sections/footer

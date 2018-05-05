@@ -32,4 +32,11 @@ function pageWidget(pages) {
 
 
 var scene = document.getElementById('parallax');
-var parallaxInstance = new Parallax(scene);
+var parallaxInstance = new Parallax(scene, {
+  limitY:0
+});
+
+
+// вычисление дляны пути svg
+// var path = document.querySelector('.preloader-icon path');
+// console.log(path.getTotalLength());
