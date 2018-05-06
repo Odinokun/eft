@@ -33,14 +33,32 @@
 
 
 
-
+.header__phone{
+  display: flex;
+  padding-right: 25px;
+  margin-left: auto;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.header__phone-link{
+  font-size: 16px;
+  color: #0f0f0f;
+  font-weight: 900;
+  text-decoration: none;
+}
+.header__phone-text{
+  line-height: 1.1;
+  font-size: 11px;
+  color: #0f0f0f;
+  opacity: .5;
+}
 
 
 .lang {
   position: relative;
   width: 24px;
   height: 24px;
-  margin-left: auto;
+  //margin-left: auto;
   &:hover {
     .lang__item {
       &:nth-child(1) {
