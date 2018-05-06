@@ -1,10 +1,12 @@
 .header {
   position: fixed;
-  z-index: 10;
   top: 0;
   right: 0;
   background-color: #f9f8f7;
   left: 0;
+  transform: translateY(-100%);
+    animation: headerDown .6s .1s ease-in-out forwards;
+  z-index: 101;
   .container {
     display: flex;
     align-items: center;
@@ -18,4 +20,13 @@
 
     fill: $brand;
   }
+}
+@keyframes headerDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+
 }

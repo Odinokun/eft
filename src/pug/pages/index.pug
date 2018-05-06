@@ -12,11 +12,12 @@ block variables
 
 block content
 
-  //include ../elements/preloader
+  include ../elements/preloader
   include ../sections/header
 
   //begin content
   section.main
+    include ../elements/waves
     .container-lg
       include ../sections/parallax
 
@@ -26,20 +27,21 @@ block content
           .section-title
             span О компании
           .container-sm
-            .about-sec__decor
-              svg
-                use(xlink:href="assets/img/sprite.svg#decor")
-              span более 100 реализованных проектов
             .about-sec__text
               h2.about-sec__title.animated EFT Group занимается обеспечением полного  цикла фермерских работ -  от семян до готовой продукции
               .about-sec__text-text.animated
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            .about-sec__pic.animated
-              .about-sec__pic-wrap
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            .about-sec__pic
+              .about-sec__decor
+                svg
+                  use(xlink:href="assets/img/sprite.svg#decor")
+                span более 100 реализованных проектов
+              .about-sec__pic-wrap.animated
                 img(src="assets/img/about-sec.jpg" alt="EFT")
-
       //end   about-sec
-        
+
       //begin .directions-sec
       section.directions-sec
         .container

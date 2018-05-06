@@ -15,11 +15,19 @@
   font-size: 36px;
   font-weight: 500;
   color: #0f0f0f;
+
+  @include max(1000) {
+    font-size: 28px;
+  }
 }
 .directions-sec__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include max(1000) {
+    justify-content: space-around;
+  }
 }
 .directions-sec__item {
   display: flex;
@@ -33,12 +41,21 @@
   border-radius: 3px;
   background-color: #fff;
   box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
-  &:nth-child(2n){
+
+  @include max(1000) {
+    width: 45%;
+    max-width: 330px;
+    margin-bottom: 30px;
+  }
+  @include max(550) {
+    width: 100%;
+  }
+  &:nth-child(2n) {
     &.animated {
       animation-delay: .2s;
     }
   }
-  &:nth-child(3n){
+  &:nth-child(3n) {
     &.animated {
       animation-delay: .4s;
     }

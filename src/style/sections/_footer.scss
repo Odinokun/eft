@@ -1,12 +1,18 @@
+.footer{
+  z-index: 1;
+}
 .footer-top {
   background-color: #363636;
   .container {
     display: flex;
-    //flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 20px;
+    @include max(670) {
+    flex-wrap: wrap;
+
+    }
   }
 }
 .footer-top__item {
@@ -21,6 +27,9 @@
   .footer-top__item-col {
     width: 33.33%;
     padding-right: 10px;
+  @include max(1000) {
+    width: auto;
+  }
   }
 }
 .footer-top__item--directions {
@@ -31,6 +40,9 @@
   .footer-top__item-col {
     width: 50%;
     padding-right: 5px;
+@include max(1000) {
+  width: 100%;
+}
   }
 }
 .footer-top__item--contacts {

@@ -2,7 +2,7 @@
   margin-bottom: 50px;
   .container {
     position: relative;
-    padding-top: 90px;
+    padding: 90px 0 0 0;
   }
   .section-title {
     top: 135px;
@@ -11,12 +11,20 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include max(1000) {
+      flex-direction: column-reverse;
+    }
   }
 }
 .section-title {
   position: absolute;
   left: 0;
   transform: rotate(-90deg);
+  @include max(1100) {
+    left: -65px;
+  }
   span {
     font-size: 14px;
     font-weight: 500;
@@ -30,6 +38,10 @@
 .about-sec__text {
   width: 50%;
   padding-right: 35px;
+  @include max(1000) {
+    width: 100%;
+    padding-right: 0;
+  }
 }
 .about-sec__text-text {
   &.animated {
@@ -40,6 +52,9 @@
     max-width: 350px;
     opacity: 0;
     color: #0f0f0f;
+    @include max(1000) {
+      max-width: 100%;
+    }
   }
 }
 .about-sec__title {
@@ -49,20 +64,36 @@
   margin-bottom: 20px;
   opacity: 0;
   color: #0f0f0f;
+  @include max(1100) {
+    font-size: 28px;
+  }
 }
 .about-sec__pic {
   width: 50%;
+  padding-left: 20px;
   opacity: 0;
+  position: relative;
+  @include max(1000) {
+    width: 100%;
+    max-width: 485px;
+    margin: 0 auto 30px;
+    padding: 0 30px 0 0;
+  }
   &.animated {
     animation-delay: .4s;
   }
 }
 .about-sec__pic-wrap {
   position: relative;
-  width: 465px;
-  height: 465px;
-  margin-bottom: 30px;
-  margin-left: 30px;
+  max-width: 465px;
+  width: 100%;
+  //width:calc(100% - 20px);
+  //margin-bottom: 30px;
+  //margin-left: 30px;
+  //  margin: 0;
+
+  @include max(1000) {
+  }
   &.active {
     &::before {
       animation: picWrapDecorHeight 1s 1s ease forwards;
@@ -113,14 +144,17 @@
 
 .about-sec__decor {
   position: absolute;
-  right: 25px;
-  bottom: 30px;
+  right: -25px;
+  bottom: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 11px;
   height: calc(100% - 30px);
   transform: rotate(180deg);
+  @include max(1000) {
+    right: 0;
+  }
   &::after {
     position: absolute;
     top: 0;
@@ -145,10 +179,11 @@
     font-size: 14px;
     z-index: 5;
     display: block;
+    font-weight: 500;
     width: 300px;
     margin-top: auto;
     padding-left: 20px;
-    transform: translateY(-135px) rotate(90deg) ;
+    transform: translateY(-105px) rotate(90deg) ;
     white-space: nowrap;
     text-transform: uppercase;
     color: #0f0f0f;
