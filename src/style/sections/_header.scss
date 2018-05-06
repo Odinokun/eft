@@ -1,12 +1,12 @@
 .header {
   position: fixed;
+  z-index: 101;
   top: 0;
   right: 0;
-  background-color: #f9f8f7;
   left: 0;
   transform: translateY(-100%);
-    animation: headerDown .6s .1s ease-in-out forwards;
-  z-index: 101;
+  animation: headerDown .6s .1s ease-in-out forwards;
+  background-color: #f9f8f7;
   .container {
     display: flex;
     align-items: center;
@@ -28,5 +28,50 @@
   to {
     transform: translateY(0);
   }
+}
 
+
+
+
+
+
+
+.lang {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  &:hover {
+    .lang__item {
+      &:nth-child(1) {
+        transform: translateY(-23px);
+      }
+      &:nth-child(3) {
+        transform: translateY(23px);
+      }
+    }
+  }
+}
+.lang__item {
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: transform .5s;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #0f0f0f;
+  border: 1px solid rgba(200, 200, 200, .87);
+  background-color: #f9f8f7;
+
+  &.active {
+    z-index: 1;
+  }
 }
