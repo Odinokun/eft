@@ -1,0 +1,19 @@
+extends ../_template
+
+block variables
+  - var title = 'Контакты | EFT group'
+
+block content
+
+  include ../elements/preloader
+  include ../sections/header
+
+  //begin content
+  section.main
+    include ../elements/waves
+    .container-lg
+      include ../elements/breadcrumbs
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts

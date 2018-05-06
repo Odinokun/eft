@@ -6,7 +6,7 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
-    'inner'
+    'contacts'
     ]);
 });
 
@@ -31,10 +31,7 @@ function pageWidget(pages) {
 //====== Begin Programmer code ======
 
 
-var scene = document.getElementById('parallax');
-var parallaxInstance = new Parallax(scene, {
-  limitY:0
-});
+
 
 
 // вычисление дляны пути svg
