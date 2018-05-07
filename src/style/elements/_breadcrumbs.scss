@@ -1,3 +1,6 @@
+.breadcrumbs {
+  padding: 10px 0 10px 15px;
+}
 .breadcrumbs__list {
   display: flex;
   flex-wrap: wrap;
@@ -14,9 +17,11 @@
   position: relative;
   list-style: none;
   &::after {
+    color: #aeadac;
     font-size: 12px;
-    margin: 0 3px 0 4px;
-    content: '/';
+    margin: 0 20px 0 18px;
+    font-weight: 700;
+    content: '>';
   }
   &:last-child {
     &::after {
@@ -27,7 +32,7 @@
 .breadcrumbs__link {
   font-size: 12px;
   white-space: nowrap;
-  color: #403549;
+  color: #0f0f0f;
   &:hover {
     text-decoration: none;
   }

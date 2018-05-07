@@ -2,18 +2,107 @@ extends ../_template
 
 block variables
   - var title = 'Контакты | EFT group'
+  - var pageHeaderTitle = 'Контакты'
 
 block content
-
-  include ../elements/preloader
   include ../sections/header
 
   //begin content
-  section.main
-    include ../elements/waves
-    .container-lg
+  section.main.contacts
+    .container
       include ../elements/breadcrumbs
+
+      h2.contacts__title Контакты
+      //begin contacts-item-row
+      .contacts-item-row
+        .contacts-item-wrap
+          .contacts-item
+            .contacts-item__icon
+              svg
+                use(xlink:href="assets/img/sprite.svg#build")
+            .contacts-item__links
+              a(href="https://goo.gl/maps/8LaLCUkaHHK2" target="_blank" rel="nofollow noopener noreferrer")
+                |Ул. Генерала Наумова, 1,
+                br
+                |оф. 107 Украина, Киев 03164
+        .contacts-item-wrap
+          .contacts-item
+            .contacts-item__icon
+              svg
+                use(xlink:href="assets/img/sprite.svg#phone")
+            .contacts-item__links
+              a(href="tel:+380443333345") +380 44 333 33 45
+              a(href="tel:+380962698886") +380 96 269 88 86
+          .contacts-item
+            .contacts-item__icon
+              svg
+                use(xlink:href="assets/img/sprite.svg#phone")
+            .contacts-item__links
+              a(href="tel:+380675055121") +380 67 505 51 21
+              a(href="tel:+380674472020") +380 67 447 20 20
+        .contacts-item-wrap
+          .contacts-item
+            .contacts-item__icon
+              svg
+                use(xlink:href="assets/img/sprite.svg#mail")
+            .contacts-item__links
+              a(href="mailto:eft.ukraine@gmail.com") eft.ukraine@gmail.com
+
+              a(href="fb.com/eft.ukraine" target="_blank" rel="nofollow noopener noreferrer") fb.com/eft.ukraine
+      //end   contacts-item-row
+
+    //begin contacts-map-sec
+    section.contacts-map-sec
+      .contacts-map__left#contacts-map
+      .contacts-map__right
+        h2.contacts-form__title Обращайтесь к нам по любому вопросу
+        form.contacts-form
+          input(name='name' placeholder='Имя').contacts-form__input
+          input(name='phone' placeholder='Телефон').contacts-form__input
+          input(name='email' placeholder='E-mail').contacts-form__input
+          input(name='quest' placeholder='Напишите тут свой вопрос').contacts-form__input
+          span.btn.button--wayra.contacts-form__input-btn
+            input(type='submit' value='отправить сообщение').contacts-form__input-submit
+    //end   contacts-map-sec
+
+
   //end content
 
   include ../sections/footer
+  //script(src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer)
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdGbaaf94NCuCkoH98Ry12HA59U0eTqIA")
+
   include ../sections/scripts
+  script.
+    var coords = [
+      [50.47344, 30.354235]
+    ];
+    var markers = [
+      [50.47344, 30.354235]
+    ];
+    var map = {};
+    var isDraggable = $(document).width() > 700 ? true : false;
+    function initialize() {
+      var mapDiv = document.getElementById("contacts-map");
+      map = new google.maps.Map(mapDiv, {
+        zoom: 16,
+        disableDefaultUI: false,
+        scrollwheel: false,
+        draggable: isDraggable,
+        center: new google.maps.LatLng(coords[0][0], coords[0][1])
+      });
+      var image = "assets/img/marker.png";
+      var bubbleWrapStart = '<div class="map_bubble">';
+      var bubbleWrapEnd = "</div>";
+      $.each(markers, function (index, val) {
+        var myLatLng = new google.maps.LatLng(val[0], val[1]);
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: image,
+          title: val[2]
+        });
+      });
+    }
+    google.maps.event.addDomListener(window, "load", initialize);
+

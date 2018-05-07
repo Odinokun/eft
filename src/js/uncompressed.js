@@ -31,9 +31,6 @@ function pageWidget(pages) {
 //====== Begin Programmer code ======
 
 
-
-
-
 // вычисление дляны пути svg
 // var path = document.querySelector('.preloader-icon path');
 // console.log(path.getTotalLength());
@@ -91,3 +88,4 @@ $(document).on('scroll', function () {
     $(wave).removeClass('active');
   }
 });
+
