@@ -1,0 +1,67 @@
+extends ../_template
+
+mixin directions-sec__item(pic, title)
+  a(href="#").directions-sec__item
+    .directions-sec__icon
+      svg
+        use(xlink:href='assets/img/sprite.svg#directions-' + pic + '')
+    span.directions-sec__text #{title}
+
+block variables
+  - var title = 'Услуги | EFT group'
+  - var pageHeaderTitle = 'Услуги'
+
+block content
+
+  //include ../elements/preloader
+  include ../sections/header
+
+  //begin content
+  section.main.service
+    include ../elements/waves
+    .container-lg
+      //begin leaf-header
+      .leaf-header-wrap
+        .leaf-header-decor.leaf-header-decor--left
+          svg
+            use(xlink:href="assets/img/sprite.svg#decor")
+        .leaf-header-decor.leaf-header-decor--right
+          svg
+            use(xlink:href="assets/img/sprite.svg#decor")
+
+        .leaf-header(style='background-image:url("assets/img/bg-service-header.jpg")')
+          .container
+            include ../elements/breadcrumbs
+
+            .leaf-header__text
+              h2.leaf-header__title
+                |Услуги
+                br
+                |EFT Group
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+      //end   leaf-header
+
+    .service__list.container
+      .container-sm
+        .service__item
+          h2.service__title Название услуги
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        .service__item
+          h2.service__title Название услуги
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        .service__item
+          h2.service__title Название услуги
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        .service__item
+          h2.service__title Название услуги
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        .service__item
+          h2.service__title Название услуги
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        .service__item
+          h2.service__title Название услуги
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts

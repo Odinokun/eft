@@ -6,6 +6,7 @@
 $(document).ready(function ($) {
   pageWidget([
     'index',
+    'service',
     'contacts'
     ]);
 });
@@ -28,10 +29,21 @@ function pageWidget(pages) {
 // END Меню для навигации при разработке
 
 
-//====== Begin Programmer code ======
 
+// begin search active
+$('.header__search-btn').on('click', function () {
+  $(this).toggleClass('active');
+  $('.search').toggleClass('active');
+});
+
+
+// begin burger active
+$('#burger').click(function(){
+  $(this).toggleClass('active');
+});
 
 // вычисление дляны пути svg
 // var path = document.querySelector('.preloader-icon path');
 // console.log(path.getTotalLength());
 
+//====== Begin Programmer code ======

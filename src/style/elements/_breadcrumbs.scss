@@ -17,11 +17,11 @@
   position: relative;
   list-style: none;
   &::after {
-    color: #aeadac;
     font-size: 12px;
-    margin: 0 20px 0 18px;
     font-weight: 700;
+    margin: 0 20px 0 18px;
     content: '>';
+    color: #aeadac;
   }
   &:last-child {
     &::after {
@@ -35,5 +35,12 @@
   color: #0f0f0f;
   &:hover {
     text-decoration: none;
+  }
+}
+
+.service {
+  .breadcrumbs__link,
+  .breadcrumbs__item::after {
+    color: #fff;
   }
 }

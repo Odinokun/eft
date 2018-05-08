@@ -5,7 +5,6 @@
 @import 'core/base';
 
 //elements
-// @import 'elements/burger';
 // @import 'elements/pagination';
 // @import 'elements/popup';
 // @import 'elements/slickBase';
@@ -14,6 +13,7 @@
  @import 'elements/btn';
  @import 'elements/menu';
  @import 'elements/waves';
+ @import 'elements/burger';
 
 //section
 @import 'sections/footer';
@@ -21,7 +21,9 @@
 @import 'sections/parallax';
 @import 'sections/about-sec';
 @import 'sections/directions-sec';
+@import 'sections/leaf-header';
 
 //pages
 @import 'pages/index';
 @import 'pages/contacts';
+@import 'pages/service';

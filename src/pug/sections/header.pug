@@ -16,6 +16,14 @@ mixin menu__subitem-d(pic, title)
 
 // begin header
 header.header
+  .search
+    form.search__form
+      input.search__input(placeholder='Введите фразу для поиска')
+      span.search__btn-wrap
+        input(type='submit' value='')
+        svg
+          use(xlink:href="assets/img/sprite.svg#search")
+    
   .container
     a(href="/").header-logo
       svg
@@ -84,6 +92,13 @@ header.header
 
     //end   menu
 
+    .header__search-btn
+      span.header__search-btn--open
+        svg
+          use(xlink:href="assets/img/sprite.svg#search")
+      span.header__search-btn--close
+        svg
+          use(xlink:href="assets/img/sprite.svg#close")
     .header__phone
       a(href="tel:+3+380443333345").header__phone-link +38 (044) 333 33 45
       span.header__phone-text пн-пт с 9-00 до 20-00
@@ -92,5 +107,7 @@ header.header
       a(href="#").lang__item en
       a(href="#").lang__item.active ru
       a(href="#").lang__item ua
+
+    include ../elements/burger
 
 // end header

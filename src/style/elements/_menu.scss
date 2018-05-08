@@ -1,7 +1,21 @@
+.menu {
+    background-color: #f9f8f7;
+
+  @include max(1270) {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  display: none;
+  }
+}
 .menu__list {
   display: flex;
   margin: 0;
   padding: 0;
+  background-color: #f9f8f7;
   svg {
     width: 5px;
     height: 5px;
@@ -12,6 +26,9 @@
   align-items: center;
   height: 80px;
   list-style: none;
+  @include max(1270) {
+    height: 50px;
+  }
 }
 .menu__item--parent {
   padding-right: 10px;
