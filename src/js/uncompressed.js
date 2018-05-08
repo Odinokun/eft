@@ -35,4 +35,3 @@ function pageWidget(pages) {
 // var path = document.querySelector('.preloader-icon path');
 // console.log(path.getTotalLength());
 
-

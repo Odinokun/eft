@@ -1,3 +1,19 @@
+mixin menu__subitem(pic, title)
+  li.menu__subitem
+    a(href="#").menu__sublink
+      .menu__sublink-pic
+        img(src='assets/img/logos/logo-' + pic + '.png' alt="logo")
+      span.menu__sublink-text #{title}
+
+mixin menu__subitem-d(pic, title)
+  li.menu__subitem
+    a(href="#").menu__sublink
+      .menu__sublink-pic
+        svg
+          use(xlink:href='assets/img/sprite.svg#' + pic + '')
+      span.menu__sublink-text #{title}
+
+
 // begin header
 header.header
   .container
@@ -5,18 +21,57 @@ header.header
       svg
         use(xlink:href="assets/img/sprite.svg#logo")
     //begin menu
-    //nav.menu#menu
+    nav.menu#menu
       ul.menu__list
         li.menu__item.menu__item--parent
           a(href="#").menu__link Направления
           span
             svg
-              use(xlink:href="assets/img/sprite.svg#arrow")
+              use(xlink:href="assets/img/sprite.svg#arrow-down")
+          ul.menu__sublist.menu__sublist--delivery
+            +menu__subitem-d('directions-01', 'Комплектующие для закладки сада, ягодника на шпалере')
+            +menu__subitem-d('directions-02', 'Элитные саженцы')
+            +menu__subitem-d('directions-03', 'Техника для садов и ягодников')
+            +menu__subitem-d('directions-04', 'Регуляторы роста ростений')
+            +menu__subitem-d('directions-05', 'Защита сада и ягодника от града и заморозков')
+            +menu__subitem-d('directions-06', 'Капельное орошение')
+            +menu__subitem-d('directions-07', 'Оборудование для сбора и переработки фундука и грецкого ореха')
+            +menu__subitem-d('directions-08', 'Переработка и хранение урожая')
+            +menu__subitem-d('directions-09', 'Оборудование для изготовления соков прямого отжима, сидра пюре, джемов')
         li.menu__item.menu__item--parent
           a(href="#").menu__link Бренды
           span
             svg
-              use(xlink:href="assets/img/sprite.svg#arrow")
+              use(xlink:href="assets/img/sprite.svg#arrow-down")
+          ul.menu__sublist.menu__sublist--brands
+            +menu__subitem('01', 'Bayer')
+            +menu__subitem('01', 'Название бренда')
+            +menu__subitem('01', 'Название бренда')
+            +menu__subitem('01', 'Название бренда')
+            +menu__subitem('01', 'Название бренда')
+            +menu__subitem('01', 'Название бренда')
+            +menu__subitem('01', 'Название бренда')
+            +menu__subitem('02', 'Procter & Gamble')
+            +menu__subitem('02', 'Название бренда')
+            +menu__subitem('02', 'Название бренда')
+            +menu__subitem('02', 'Название бренда')
+            +menu__subitem('02', 'Название бренда')
+            +menu__subitem('02', 'Название бренда')
+            +menu__subitem('02', 'Название бренда')
+            +menu__subitem('03', 'Lacosta')
+            +menu__subitem('03', 'Название бренда')
+            +menu__subitem('03', 'Название бренда')
+            +menu__subitem('03', 'Название бренда')
+            +menu__subitem('03', 'Название бренда')
+            +menu__subitem('03', 'Название бренда')
+            +menu__subitem('03', 'Название бренда')
+            +menu__subitem('04', 'Google')
+            +menu__subitem('04', 'Название бренда')
+            +menu__subitem('04', 'Название бренда')
+            +menu__subitem('04', 'Название бренда')
+            +menu__subitem('04', 'Название бренда')
+            +menu__subitem('04', 'Название бренда')
+            +menu__subitem('04', 'Название бренда')
         li.menu__item
           a(href="#").menu__link Наши проекты
         li.menu__item
@@ -25,6 +80,8 @@ header.header
           a(href="#").menu__link Контакты
         li.menu__item.menu__item--shop
           a(href="#").menu__link Интернет магазин
+
+
     //end   menu
 
     .header__phone

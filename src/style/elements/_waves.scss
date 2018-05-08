@@ -1,55 +1,22 @@
-//.wave {
-//  right: 0;
-//  left: 0;
-//  width: 100%;
-//  background-position: 50% 0;
-//  bottom: 0;
-//  transition: transform .5s;
-//}
-//.wave-01 {
-//  position: fixed;
-//  height: 490px;
-//  background-image: url('../img/wave-01.png');
-//  transform: translateY(100%);
-//  &.active {
-//    transform: translateY(0);
-//    &.absolute {
-//      position: absolute;
-//    }
-//  }
-//}
-//.wave-02 {
-//  position: fixed;
-//  height: 345px;
-//  transform: translateY(100%);
-//  background-image: url('../img/wave-02.png');
-//  &.active {
-//    transform: translateY(0%);
-//    &.absolute {
-//      position: absolute;
-//    }
-//  }
-//}
-//.wave-03 {
-//  position: absolute;
-//  height: 250px;
-//  background-image: url('../img/wave-03.png');
-//}
-
-
-
+.contacts {
+  .wave {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
 .wave {
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
   transition: transform .5s;
+  pointer-events: none;
   background-position: 50% 0;
 }
 .wave-01 {
   position: absolute;
-  height: 490px;
   bottom: 40%;
+  height: 490px;
   background-image: url('../img/wave-01.png');
   &.fix {
     position: fixed;
@@ -60,8 +27,8 @@
   }
 }
 .wave-02 {
-  bottom: 20%;
   position: absolute;
+  bottom: 20%;
   height: 345px;
   background-image: url('../img/wave-02.png');
   &.fix {
