@@ -18,6 +18,9 @@ $(function() {
   // begin preloader
   require('./modules/preloader')();
 
+  // begin waves
+  require('./modules/waves')();
+
   // begin Fancybox3
   // require('./modules/fancybox')();
 

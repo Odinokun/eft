@@ -4,6 +4,28 @@ header.header
     a(href="/").header-logo
       svg
         use(xlink:href="assets/img/sprite.svg#logo")
+    //begin menu
+    //nav.menu#menu
+      ul.menu__list
+        li.menu__item.menu__item--parent
+          a(href="#").menu__link Направления
+          span
+            svg
+              use(xlink:href="assets/img/sprite.svg#arrow")
+        li.menu__item.menu__item--parent
+          a(href="#").menu__link Бренды
+          span
+            svg
+              use(xlink:href="assets/img/sprite.svg#arrow")
+        li.menu__item
+          a(href="#").menu__link Наши проекты
+        li.menu__item
+          a(href="#").menu__link Услуги
+        li.menu__item
+          a(href="#").menu__link Контакты
+        li.menu__item.menu__item--shop
+          a(href="#").menu__link Интернет магазин
+    //end   menu
 
     .header__phone
       a(href="tel:+3+380443333345").header__phone-link +38 (044) 333 33 45
