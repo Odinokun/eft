@@ -1,0 +1,45 @@
+extends ../_template
+
+mixin directions-sec__item(pic, title)
+  a(href="#").directions-sec__item
+    .directions-sec__icon
+      svg
+        use(xlink:href='assets/img/sprite.svg#directions-' + pic + '')
+    span.directions-sec__text #{title}
+
+block variables
+  - var title = 'Бренд | EFT group'
+  - var pageHeaderTitle = 'Байер'
+
+block content
+
+  //include ../elements/preloader
+  include ../sections/header
+
+  //begin content
+  section.main.brand
+    include ../elements/waves
+    .container.brand-page
+      include ../elements/breadcrumbs
+      .container-sm
+        .brand-top
+          .brand-top__left
+            h2.brand-top__title Байер
+            p Bayer – инновационная компания с давней традицией исследовательских разработок. Успешно применяя новейшие научные достижения для решения важнейших глобальных задач, мы предлагаем инновационные разработки, способные удовлетворить актуальные потребности клиентов.
+            p Только инновации в области наук о жизни позволят нам ответить на глобальные вызовы человечества в области здравоохранения и сельского хозяйства. Деятельность Bayer сфокусирована на естественно-научных направлениях. Будучи экспертом в области здоровья людей, животных и растений, мы объединяем усилия с врачами, ветеринарами и фермерами на пути к решению глобальных проблем человечества. В этом состоит наше конкурентное преимущество.
+          .brand-top__right
+            .brand-top__logo
+              img(src="assets/img/bayer-logo.svg" alt="logo")
+      .container-sm
+        header.directions-sec__header
+          h2.directions-sec__header-title Направления
+        .directions-sec__list
+          +directions-sec__item('01', 'Комплектующие для закладки сада, ягодника на шпалере')
+          +directions-sec__item('02', 'Элитные саженцы')
+          +directions-sec__item('03', 'Техника для садов и ягодников')
+
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts

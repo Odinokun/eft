@@ -6,8 +6,8 @@ $(function() {
   // begin Scroll2Ancor
   require('./modules/scroll2ancor')();
 
-  // begin Slick slider
-  // require('./modules/slick')();
+  // begin Pagination
+  require('./modules/pagination')();
 
   // begin Popup
   // require('./modules/popup')();
