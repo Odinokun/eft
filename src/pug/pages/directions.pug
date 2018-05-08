@@ -1,0 +1,89 @@
+extends ../_template
+
+mixin directions-filter__row(text, sum)
+  .directions-filter__row
+    label.directions-filter__label
+      input(type="checkbox")
+      .directions-filter__checkbox
+      span.directions-filter__text #{text}
+        span.directions-filter__sum #{sum}
+
+mixin directions-item(pic, title)
+  a(href="#").directions-item
+    .directions-item__pic
+      img(src='assets/img/directions-' + pic + '.jpg' alt="img")
+    .directions-item__text
+      h3.directions-item__title #{title}
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore.
+
+
+block variables
+  - var title = 'Направления | EFT group'
+  - var pageHeaderTitle = 'Направления'
+
+block content
+
+  //include ../elements/preloader
+  include ../sections/header
+
+  //begin content
+  section.main.directions
+    include ../elements/waves
+    .container-lg
+      //begin leaf-header
+      .leaf-header-wrap
+        .leaf-header-decor.leaf-header-decor--left
+          svg
+            use(xlink:href="assets/img/sprite.svg#decor")
+        .leaf-header-decor.leaf-header-decor--right
+          svg
+            use(xlink:href="assets/img/sprite.svg#decor")
+
+        .leaf-header(style='background-image:url("assets/img/bg-directions-header.jpg")')
+          .container
+            include ../elements/breadcrumbs
+
+            .leaf-header__text
+              h2.leaf-header__title Комплектующие для закладки сада, ягодника на шпалере
+      //end   leaf-header
+
+    //begin directions
+    section.directions-wrap
+      .container
+        .directions-filter
+          form.directions-filter__form
+            +directions-filter__row('Все ', ' (145)')
+            +directions-filter__row('Инсектициды', '(8)')
+            +directions-filter__row('Гербициды', '(14)')
+            +directions-filter__row('Протруйники', '(38)')
+            +directions-filter__row('Органические удобрения', '(38)')
+            +directions-filter__row('Фунгициды', '(19)')
+          form.directions-filter__form
+            h4.directions-filter__form-title Бренды
+            +directions-filter__row('Все', '(60)')
+            +directions-filter__row('Вертимек', '(8)')
+            +directions-filter__row('Люфокс', '(14)')
+            +directions-filter__row('Пленум', '(38)')
+
+
+        .directions-list
+          header.directions-list__header
+            h2.directions-list__title Весь ассортимент
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+
+          +directions-item('01', 'Название продукта может в две строки')
+          +directions-item('02', 'Название продукта может в две строки')
+          +directions-item('03', 'Название продукта может в две строки')
+          +directions-item('04', 'Название продукта может в две строки')
+          +directions-item('05', 'Название продукта может в две строки')
+          +directions-item('06', 'Название продукта может в две строки')
+          include ../elements/pagination
+
+      .container
+    //end   directions
+
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts

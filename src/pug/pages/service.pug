@@ -1,12 +1,5 @@
 extends ../_template
 
-mixin directions-sec__item(pic, title)
-  a(href="#").directions-sec__item
-    .directions-sec__icon
-      svg
-        use(xlink:href='assets/img/sprite.svg#directions-' + pic + '')
-    span.directions-sec__text #{title}
-
 block variables
   - var title = 'Услуги | EFT group'
   - var pageHeaderTitle = 'Услуги'

@@ -5,7 +5,6 @@
 @import 'core/base';
 
 //elements
-// @import 'elements/pagination';
 // @import 'elements/popup';
 // @import 'elements/slickBase';
 // @import 'elements/stickyHeader';
@@ -14,6 +13,7 @@
  @import 'elements/menu';
  @import 'elements/waves';
  @import 'elements/burger';
+ @import 'elements/pagination';
 
 //section
 @import 'sections/footer';
@@ -27,3 +27,4 @@
 @import 'pages/index';
 @import 'pages/contacts';
 @import 'pages/service';
+@import 'pages/directions';

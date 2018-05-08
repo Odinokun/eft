@@ -94,4 +94,7 @@
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 20px;
+  @include max(700) {
+    font-size: 28px;
+  }
 }

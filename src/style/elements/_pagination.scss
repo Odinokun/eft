@@ -1,62 +1,76 @@
 .pagination {
+  position: relative;
   display: flex;
-  padding: 10px 0;
-  text-align: center;
-
+  width: 100%;
   justify-content: center;
+  padding: 30px 20px 0 0;
+  text-align: center;
 }
 .pagination__list {
+  position: relative;
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
-
-  align-items: center;
 }
 .pagination__item {
-  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin: 0;
   list-style: none;
-}
-.pagination__link {
-  display: block;
-  padding: 3px 6px;
-  transition: .5s;
-  text-decoration: none;
-  color: #363636;
-  border: 1px solid transparent;
+  text-align: center;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid #cfcdc6;
+  &:last-child {
+    border-right: 1px solid #cfcdc6;
+  }
   &.active {
-    color: #fff;
-    background-color: #824b75;
-    &:hover {
-      color: #fff;
+  border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    & + li {
+      border-left: 1px solid transparent;
+    }
+
+    a {
+      color: $highlight;
     }
   }
+}
+.pagination__link {
+  font-size: 24px;
+  transition: .5s;
+  text-decoration: none;
+  color: #0f0f0f;
   &.inactive {
     pointer-events: none;
   }
-  &:hover {
-    color: #824b75;
-    border: 1px solid #824b75;
-  }
 }
-.pagination-arr__left,
-.pagination-arr__right {
-  position: relative;
-  .pagination__link {
-    border: none;
-  }
-  svg {
-    display: block;
-    width: 20px;
-    height: 20px;
-    margin: auto;
-    transition: fill .5s;
-
-    fill: #824b75;
-    &:hover {
-      fill: #501743;
-    }
-  }
+#line-t {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 1px;
+  padding: 0;
+  content: '';
+  text-indent: -10000px;
+  background: $highlight;
 }
-.pagination-arr__left {
-  transform: rotate(180deg);
+#line-b {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 1px;
+  padding: 0;
+  content: '';
+  text-indent: -10000px;
+  background: $highlight;
 }
