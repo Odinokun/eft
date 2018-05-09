@@ -1,12 +1,30 @@
 .brand-page {
   position: relative;
 }
+.brand-page__left-title {
+  font-size: 14px;
+  position: absolute;
+  top: 110px;
+  left: 35px;
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  opacity: .5;
+  color: #0f0f0f;
+
+  @include max(1100) {
+    left: -10px;
+  }
+  @include max(730) {
+    display: none;
+  }
+}
 .brand-top {
   display: flex;
   padding: 30px 0;
+
   @include max(730) {
-    flex-direction: column-reverse;
     align-items: center;
+    flex-direction: column-reverse;
   }
 }
 .brand-top__left {
@@ -24,9 +42,10 @@
   flex: none;
   justify-content: flex-end;
   width: 300px;
+
   @include max(730) {
-    margin-bottom: 30px;
     justify-content: center;
+    margin-bottom: 30px;
   }
 }
 .brand-top__title {
@@ -34,6 +53,7 @@
   font-weight: 500;
   margin-bottom: 20px;
   color: #0f0f0f;
+
   @include max(730) {
     text-align: center;
   }
@@ -49,8 +69,7 @@
 }
 .brand {
   .directions-sec__header {
-
-    padding: 15px 20px 40px 0px;
+    padding: 15px 20px 40px 0;
   }
   .directions-sec__header-title {
     text-align: left;

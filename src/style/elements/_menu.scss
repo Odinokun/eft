@@ -1,14 +1,23 @@
 .menu {
-    background-color: #f9f8f7;
+  background-color: #f9f8f7;
 
-  @include max(1270) {
-    position: absolute;
+  @include max(1000) {
+    position: fixed;
     top: 80px;
+    right: 0;
     left: 0;
-    width: 100%;
     display: flex;
     justify-content: center;
-  display: none;
+    height: calc(100vh - 80px);
+    transition: .5s;
+    transform: translateX(100%);
+    background-color: #fff;
+    &.active {
+      transform: translateX(0%);
+    }
+  }
+  @include max(480) {
+    top: 130px;
   }
 }
 .menu__list {
@@ -16,6 +25,13 @@
   margin: 0;
   padding: 0;
   background-color: #f9f8f7;
+
+
+  @include max(1000) {
+    flex-direction: column;
+    padding-top: 50px;
+    background-color: #fff;
+  }
   svg {
     width: 5px;
     height: 5px;
@@ -26,12 +42,17 @@
   align-items: center;
   height: 80px;
   list-style: none;
+
   @include max(1270) {
     height: 50px;
   }
 }
 .menu__item--parent {
   padding-right: 10px;
+
+  @include max(1270) {
+    padding-right: 0;
+  }
   &:hover {
     svg {
       opacity: 1;
@@ -47,11 +68,21 @@
       transform: scale(1);
       pointer-events: auto;
       opacity: 1;
+
+      @include max(1000) {
+        transform: scale(0);
+        pointer-events: none;
+        opacity: 0;
+      }
     }
   }
   & > span {
     width: 10px;
     height: 7px;
+
+    @include max(1000) {
+      margin-left: 20px;
+    }
     svg {
       width: 10px;
       height: 7px;
@@ -62,6 +93,10 @@
   }
   .menu__link {
     position: relative;
+    @include max(1100) {
+
+    padding-right: 5px;
+    }
     &::before {
       position: absolute;
       right: 0;
@@ -76,6 +111,10 @@
       border-right: 17px solid transparent;
       border-bottom: 15px solid #fff;
       border-left: 17px solid transparent;
+
+      @include max(1000) {
+        display: none;
+      }
     }
   }
 }
@@ -108,9 +147,20 @@
   display: block;
   padding: 0 20px;
   transition: color $highlight;
+  white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
   color: #0f0f0f;
+
+  @include max(1270) {
+    padding: 0 15px;
+  }
+  @include max(1100) {
+    padding: 0 10px;
+  }
+  @include max(1000) {
+    padding: 0 20px;
+  }
   &:hover {
     color: $highlight;
   }
@@ -124,15 +174,46 @@
   right: 0;
   left: 0;
   display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
   flex-wrap: wrap;
   width: 100%;
   max-width: 1280px;
   margin: auto;
   list-style: none;
-  background-color: #fff;
   transition: .5s;
-  transform: scale(0);
+  transform: translateX(0%) scale(0);
   pointer-events: none;
+  background-color: #fff;
+
+  @include max(1000) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    transform: translateX(100%) scale(1) !important;
+    opacity: 1 !important;
+    background-color: #fff;
+  }
+
+  .burger {
+    margin-right: 25px;
+
+    @include max(670) {
+      margin-right: -5px;
+    }
+    @include max(480) {
+      margin-right: 5px;
+    }
+  }
+  &.active {
+    padding-bottom: 80px;
+    transform: translateX(0%) scale(1) !important;
+    pointer-events: auto !important;
+  }
 }
 // end submenu
 
@@ -140,6 +221,11 @@
 .menu__sublist--brands {
   padding: 30px 10px 35px 30px;
   opacity: 0;
+
+  @include max(1000) {
+    z-index: 10;
+    padding: 60px 20px 20px 60px;
+  }
   .menu__subitem {
     width: 14.28%;
     margin-bottom: 15px;
@@ -148,10 +234,19 @@
       width: 16.66%;
     }
     @include max(1000) {
-      width: 20%;
+      width: 25%;
     }
     @include max(800) {
       width: 25%;
+    }
+    @include max(700) {
+      width: 33.33%;
+    }
+    @include max(550) {
+      width: 50%;
+    }
+    @include max(425) {
+      width: 100%;
     }
   }
   .menu__sublink {
@@ -193,10 +288,24 @@
 .menu__sublist--delivery {
   justify-content: center;
   padding: 40px 10px 25px 30px;
+  @include max(730) {
+    justify-content: flex-start;
+  }
+
+  @include max(1000) {
+    z-index: 10;
+    padding: 60px 20px 20px 60px;
+  }
   .menu__subitem {
     width: 33.33%;
     max-width: 325px;
     margin-bottom: 30px;
+    @include max(730) {
+      width: 50%;
+    }
+    @include max(550) {
+      width: 100%;
+    }
   }
   .menu__sublink {
     display: flex;
@@ -207,13 +316,15 @@
   .menu__sublink-text {
     font-size: 14px;
     padding: 0 50px 0 20px;
+
     @include max(1000) {
       padding: 0 15px;
     }
   }
   .menu__sublink-pic {
     flex: none;
-    padding: 0 0px 0 30px;
+    padding: 0 0 0 30px;
+
     @include max(1000) {
       padding: 0;
     }

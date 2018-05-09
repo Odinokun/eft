@@ -32,11 +32,15 @@ header.header
     nav.menu#menu
       ul.menu__list
         li.menu__item.menu__item--parent
-          a(href="#").menu__link Направления
+          a(href="https://www.google.ru/").menu__link Направления
           span
             svg
               use(xlink:href="assets/img/sprite.svg#arrow-down")
           ul.menu__sublist.menu__sublist--delivery
+            .burger
+              .burger-brick
+              .burger-brick.middle
+              .burger-brick
             +menu__subitem-d('directions-01', 'Комплектующие для закладки сада, ягодника на шпалере')
             +menu__subitem-d('directions-02', 'Элитные саженцы')
             +menu__subitem-d('directions-03', 'Техника для садов и ягодников')
@@ -47,11 +51,15 @@ header.header
             +menu__subitem-d('directions-08', 'Переработка и хранение урожая')
             +menu__subitem-d('directions-09', 'Оборудование для изготовления соков прямого отжима, сидра пюре, джемов')
         li.menu__item.menu__item--parent
-          a(href="#").menu__link Бренды
+          a(href="https://www.google.ru/").menu__link Бренды
           span
             svg
               use(xlink:href="assets/img/sprite.svg#arrow-down")
           ul.menu__sublist.menu__sublist--brands
+            .burger
+              .burger-brick
+              .burger-brick.middle
+              .burger-brick
             +menu__subitem('01', 'Bayer')
             +menu__subitem('01', 'Название бренда')
             +menu__subitem('01', 'Название бренда')
@@ -108,6 +116,9 @@ header.header
       a(href="#").lang__item.active ru
       a(href="#").lang__item ua
 
-    include ../elements/burger
+    .burger.burger--main
+      .burger-brick
+      .burger-brick.middle
+      .burger-brick
 
 // end header

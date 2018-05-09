@@ -36,12 +36,23 @@ function pageWidget(pages) {
 $('.header__search-btn').on('click', function () {
   $(this).toggleClass('active');
   $('.search').toggleClass('active');
+  $('.menu__sublist').removeClass('active');
+
 });
 
 
 // begin burger active
-$('#burger').click(function(){
+$('.burger--main').click(function(){
   $(this).toggleClass('active');
+  $('#menu').toggleClass('active');
+  $('.menu__sublist').removeClass('active');
+  $('body').toggleClass('fix');
+
+});
+
+// begin burger active
+$('.menu__sublist .burger').click(function(){
+  $(this).parents('.menu__sublist').removeClass('active');
 });
 
 // вычисление дляны пути svg
@@ -49,6 +60,8 @@ $('#burger').click(function(){
 // console.log(path.getTotalLength());
 
 
-
+$('.menu__item--parent span').on('click', function () {
+  $(this).siblings('.menu__sublist').addClass('active');
+});
 
 //====== Begin Programmer code ======

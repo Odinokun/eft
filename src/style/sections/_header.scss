@@ -7,22 +7,43 @@
   transform: translateY(-100%);
   animation: headerDown .6s .1s ease-in-out forwards;
   background-color: #f9f8f7;
+
+  @include max(480) {
+    position: relative;
+  }
   .container {
-  background-color: #f9f8f7;
     position: relative;
     display: flex;
     align-items: center;
     height: 80px;
+    background-color: #f9f8f7;
+
+    @include max(480) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 130px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
   }
 }
 .header-logo {
   margin-right: auto;
-  padding-right: 20px;
+
+  @include max(480) {
+    order: -2;
+    width: 80%;
+  }
   svg {
-    width: 195px;
-    height: 36px;
+    width: 100%;
+    min-width: 162px;
+    max-width: 195px;
+    max-height: 39px;
 
     fill: $brand;
+    @include max(480) {
+      max-width: 215px;
+    }
   }
 }
 
@@ -38,14 +59,16 @@
   position: absolute;
   top: 80px;
   right: 0;
-  transform: translateY(-150%);
   left: 0;
-  transition: transform .5s;
   padding: 20px 20px 60px 20px;
+  transition: transform .5s;
+  transform: translateY(-150%);
   background-color: #f9f8f7;
+  @include max(480) {
+    top: 130px;
+  }
   &.active {
-  transform: translateY(0);
-
+    transform: translateY(0);
   }
 }
 .search__form {
@@ -53,10 +76,10 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #325;
   max-width: 694px;
   margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  background-color: #325;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .06);
 }
 .search__input {
   font-size: 14px;
@@ -71,6 +94,10 @@
   border-left: 1px solid #cecece;
 
   @include placeholder-color(#000);
+  @include max(320) {
+  padding: 5px 5px 5px 20px;
+
+  }
 }
 .search__btn-wrap {
   position: relative;
@@ -81,13 +108,12 @@
   background-color: $highlight;
 
   input {
-  cursor: pointer;
     width: 64px;
     height: 64px;
+    cursor: pointer;
     opacity: 0;
   }
   svg {
-    pointer-events: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -96,6 +122,7 @@
     width: 24px;
     height: 26px;
     margin: auto;
+    pointer-events: none;
 
     fill: #fff;
   }
@@ -107,8 +134,13 @@
   height: 17px;
   margin: 0 25px;
   cursor: pointer;
-  @include max(1270) {
-    margin-left: auto !important;
+
+  @include max(1100) {
+    margin: 0 15px;
+  }
+  @include max(480) {
+    order: 10;
+    margin-right: 0;
   }
   &:hover {
     svg {
@@ -134,8 +166,8 @@
   .header__search-btn--close {
     position: absolute;
     top: 0;
-    transition: opacity .5s;
     left: 0;
+    transition: opacity .5s;
   }
   .header__search-btn--open {
     opacity: 1;
@@ -154,19 +186,22 @@
   margin-left: auto;
   padding-top: 12px;
   padding-right: 25px;
+
   @include max(1270) {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 .header__phone-link {
   font-size: 16px;
   font-weight: 900;
+  white-space: nowrap;
   text-decoration: none;
   color: #0f0f0f;
 }
 .header__phone-text {
   font-size: 11px;
   line-height: 1.1;
+  white-space: nowrap;
   opacity: .5;
   color: #0f0f0f;
 }
@@ -176,6 +211,12 @@
   position: relative;
   width: 24px;
   height: 24px;
+  @include max(480) {
+    margin-left: auto;
+  }
+  @include max(320) {
+    margin-left: 0;
+  }
   &:hover {
     .lang__item {
       &:nth-child(1) {

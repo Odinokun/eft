@@ -1,3 +1,10 @@
+.menu__sublist {
+  .burger {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+}
 .burger {
   display: none;
   flex: none;
@@ -6,8 +13,13 @@
   margin-top: -7px;
   margin-left: 30px;
   cursor: pointer;
-  @include max(1270) {
+
+  @include max(1000) {
     display: block;
+  }
+  @include max(480) {
+    order: -1;
+    margin-left: auto;
   }
   &:hover {
     .burger-brick {

@@ -136,6 +136,9 @@ svg {
   padding-top: 80px;
   padding-bottom: 30px;
   background-color: #f9f8f7;
+  @include max(480) {
+    padding-top: 0;
+  }
 }
 .container-lg {
   width: 100%;
