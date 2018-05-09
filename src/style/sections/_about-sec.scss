@@ -87,13 +87,6 @@
   position: relative;
   max-width: 465px;
   width: 100%;
-  //width:calc(100% - 20px);
-  //margin-bottom: 30px;
-  //margin-left: 30px;
-  //  margin: 0;
-
-  @include max(1000) {
-  }
   &.active {
     &::before {
       animation: picWrapDecorHeight 1s 1s ease forwards;

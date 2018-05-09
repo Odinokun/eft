@@ -9,9 +9,6 @@ $(function() {
   // begin Pagination
   require('./modules/pagination')();
 
-  // begin Popup
-  // require('./modules/popup')();
-
   // begin Animate.css
   require('./modules/animateCss')();
 
@@ -21,7 +18,7 @@ $(function() {
   // begin waves
   require('./modules/waves')();
 
-  // begin Fancybox3
-  // require('./modules/fancybox')();
+  // begin scroll2top
+  require('./modules/scroll2top')();
 
 });

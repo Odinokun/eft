@@ -1,0 +1,147 @@
+extends ../_template
+
+block variables
+  - var title = 'Активная борона | EFT group'
+  - var pageHeaderTitle = 'Активная борона'
+
+block content
+
+  //include ../elements/preloader
+  include ../sections/header
+
+  //begin content
+  section.main.product
+    include ../elements/waves
+    .container.product-page
+      include ../elements/breadcrumbs
+      .product-top
+        .product-top__left
+          h2.product-top__title Активная борона для обработки междурядий серия DS-BA
+          p Устройство разработано для оптимальной подготовки почвы под посев либо посадку путем взрыхления, выравнивания поверхности поля и легкой трамбовки верхнего слоя почвы при бесплужном возделывании в садах для обработки междурядий.
+          p Эта операция применяется для выравнивания поверхности почвы, придания ей комковатой структуры, способствующей вентиляции и проникновению влаги. Борона представляет собой агрегат,подвешиваемый на трёхточечном зацепе непосредственно к тракторам небольшой требуемой минимальной мощности. 
+
+        .product-top__right
+          .product-slider-wrap
+            .product-slider__counter
+              span.product-slider__counter-tab#product-slider__counter-tab 1
+              span.product-slider__counter-divide /
+              span.product-slider__counter-all#product-slider__counter-all
+
+
+            .product-slider#product-slider
+              .product-slider__item.product-slider__item--video
+                iframe(src="https://www.youtube.com/embed/B9FzVhw8_bY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+              .product-slider__item
+                img(src="assets/img/slider/slide-01.jpg" alt="slide")
+              .product-slider__item
+                img(src="assets/img/slider/slide-01.jpg" alt="slide")
+              .product-slider__item
+                img(src="assets/img/slider/slide-01.jpg" alt="slide")
+              .product-slider__item
+                img(src="assets/img/slider/slide-01.jpg" alt="slide")
+
+      .product-tech
+        header.product-tech__header
+          h3.product-tech__header-title Технические характеристики:
+        .product-tech__table
+          .product-tech__table-col
+            .product-tech__table-td
+              span Модель
+            .product-tech__table-td
+              span DS-BA225
+          .product-tech__table-col
+            .product-tech__table-td
+              span
+                |Робоча ширина,
+                br
+                |см
+            .product-tech__table-td
+              span 225 см
+          .product-tech__table-col
+            .product-tech__table-td
+              span
+                |Загальна
+                br
+                |ширина
+            .product-tech__table-td
+              span 230
+          .product-tech__table-col
+            .product-tech__table-td
+              span
+                |Вага,
+                br
+                |кг
+            .product-tech__table-td
+              span 750
+          .product-tech__table-col
+            .product-tech__table-td
+              span
+                |К-сть ножів
+                br
+                |шт
+            .product-tech__table-td
+              span 18
+          .product-tech__table-col
+            .product-tech__table-td
+              span Об./хв
+            .product-tech__table-td
+              span 540
+          .product-tech__table-col
+            .product-tech__table-td
+              span
+                |Потужність
+                br
+                |трактора к.с.
+            .product-tech__table-td
+              span 60
+
+
+        .product-tech__list-wrap
+          ul.product-tech__list
+            li.product-tech__item тыльный выравнивающий вал
+            li.product-tech__item зубья на поворотных головках - толщина 10 мм, длина 260 мм
+            li.product-tech__item одноступенчатая передача 540 об./мин от вала отбора мощности (BOM)
+            li.product-tech__item вал отбора мощности (BOM) со сцепным шкворнем
+            li.product-tech__item трёхточечная система навески
+          ul.product-tech__list
+            li.product-tech__item регулирование рабочей высоты боковых защитных экранов
+            li.product-tech__item регулирование высоты боковых защитных экранов
+            li.product-tech__item тыльная выравнивающая балка
+            li.product-tech__item два ножа на фланец
+            li.product-tech__item крюк приводного вала
+
+      .product-interes
+        a(href="#").product-interes__item
+          .product-interes__pic
+            img(src='assets/img/product-01.jpg' alt="img")
+          .product-interes__text
+            h3.product-interes__title Название продукта может в две строки
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore.
+
+        a(href="#").product-interes__item
+          .product-interes__pic
+            img(src='assets/img/product-02.jpg' alt="img")
+          .product-interes__text
+            h3.product-interes__title Название продукта может в две строки
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore.
+
+        a(href="#").product-interes__item
+          .product-interes__pic
+            img(src='assets/img/product-03.jpg' alt="img")
+          .product-interes__text
+            h3.product-interes__title Название продукта может в две строки
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore.
+
+
+
+
+
+
+
+
+
+
+  //end content
+
+  include ../sections/footer
+  include ../sections/scripts
