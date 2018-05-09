@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Inner</title>
+    <meta name="description" content="EFT group">
+    <meta name="keywords" content="EFT group">
+    <meta name="author" content="odinokun">
+    <!-- begin responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- end responsive-->
+    <!-- begin social content&image-->
+    <meta property="og:title" content="EFT group">
+    <meta property="og:url" content="http://odinokun.com/">
+    <meta property="og:image" content="assets/img/social.jpg">
+    <!-- end social content&image-->
+    <!-- begin favicon block start-->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png">
+    <!-- end favicon block end-->
+    <style>
+      .preloader {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh
+      }
+
+      .preloader::after,
+      .preloader::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        content: ''
+      }
+
+      .preloader::before {
+        animation: preloaderOpacity .5s 1.6s ease-in-out forwards;
+        background-color: #f9f8f7
+      }
+
+      .preloader::after {
+        transform: translateX(-100%);
+        animation: preloader 2s .6s ease-in-out forwards;
+        background-color: #43ac34
+      }
+
+      @keyframes preloader {
+        0%,
+        100% {
+          transform: translateX(-100%)
+        }
+        50% {
+          transform: translateX(0)
+        }
+      }
+
+      @keyframes preloaderOpacity {
+        0% {
+          opacity: 1
+        }
+        100% {
+          opacity: 0
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/uncompressed.css">
+    <!-- begin custom browsers color-->
+    <meta name="theme-color" content="#43ac34">
+    <!-- end custom browsers color-->
+    <!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- begin header-->
+    <header class="header">
+      <div class="search">
+        <form class="search__form">
+          <input class="search__input" placeholder="Введите фразу для поиска">
+          <span class="search__btn-wrap">
+            <input type="submit" value="">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#search"></use>
+            </svg>
+          </span>
+        </form>
+      </div>
+      <div class="container">
+        <a class="header-logo" href="/">
+          <svg>
+            <use xlink:href="assets/img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <!--begin menu-->
+        <nav class="menu" id="menu">
+          <ul class="menu__list">
+            <li class="menu__item menu__item--parent">
+              <a class="menu__link" href="https://www.google.ru/">Направления</a>
+              <span>
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
+                </svg>
+              </span>
+              <ul class="menu__sublist menu__sublist--delivery">
+                <div class="burger">
+                  <div class="burger-brick"></div>
+                  <div class="burger-brick middle"></div>
+                  <div class="burger-brick"></div>
+                </div>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#directions-01"></use>
+                      </svg>
+                    </div>
+                    <span class="menu__sublink-text">Комплектующие для закладки сада, ягодника на шпалере</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#directions-02"></use>
+                      </svg>
+                    </div>
+                    <span class="menu__sublink-text">Элитные саженцы</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#directions-03"></use>
+                      </svg>
+                    </div>
+                    <span class="menu__sublink-text">Техника для садов и ягодников</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#directions-04"></use>
+                      </svg>
+                    </div>
+                    <span class="menu__sublink-text">Регуляторы роста ростений</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#directions-05"></use>
+                      </svg>
+                    </div>
+                    <span class="menu__sublink-text">Защита сада и ягодника от града и заморозков</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#directions-06"></use>
+                      </svg>
+                    </div>
+                    <span class="menu__sublink-text">Капельное орошение</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#directions-07"></use>
+                      </svg>
+                    </div>
+                    <span class="menu__sublink-text">Оборудование для сбора и переработки фундука и грецкого ореха</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#directions-08"></use>
+                      </svg>
+                    </div>
+                    <span class="menu__sublink-text">Переработка и хранение урожая</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#directions-09"></use>
+                      </svg>
+                    </div>
+                    <span class="menu__sublink-text">Оборудование для изготовления соков прямого отжима, сидра пюре, джемов</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item menu__item--parent">
+              <a class="menu__link" href="https://www.google.ru/">Бренды</a>
+              <span>
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
+                </svg>
+              </span>
+              <ul class="menu__sublist menu__sublist--brands">
+                <div class="burger">
+                  <div class="burger-brick"></div>
+                  <div class="burger-brick middle"></div>
+                  <div class="burger-brick"></div>
+                </div>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-01.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Bayer</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-01.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-01.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-01.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-01.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-01.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-01.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-02.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Procter &amp; Gamble</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-02.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-02.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-02.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-02.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-02.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-02.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-03.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Lacosta</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-03.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-03.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-03.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-03.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-03.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-03.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-04.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Google</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-04.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-04.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-04.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-04.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-04.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__sublink" href="#">
+                    <div class="menu__sublink-pic">
+                      <img src="assets/img/logos/logo-04.png" alt="logo">
+                    </div>
+                    <span class="menu__sublink-text">Название бренда</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Наши проекты</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Услуги</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+            <li class="menu__item menu__item--shop">
+              <a class="menu__link" href="#">Интернет магазин</a>
+            </li>
+          </ul>
+        </nav>
+        <!--end   menu-->
+        <div class="header__search-btn">
+          <span class="header__search-btn--open">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#search"></use>
+            </svg>
+          </span>
+          <span class="header__search-btn--close">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#close"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="header__phone">
+          <a class="header__phone-link" href="tel:+3+380443333345">+38 (044) 333 33 45</a>
+          <span class="header__phone-text">пн-пт с 9-00 до 20-00</span>
+        </div>
+        <div class="lang">
+          <a class="lang__item" href="#">en</a>
+          <a class="lang__item active" href="#">ru</a>
+          <a class="lang__item" href="#">ua</a>
+        </div>
+        <div class="burger burger--main">
+          <div class="burger-brick"></div>
+          <div class="burger-brick middle"></div>
+          <div class="burger-brick"></div>
+        </div>
+      </div>
+    </header>
+    <!-- end header-->
+    <!--begin content-->
+    <section class="main">
+      <div class="container">
+        <h1>Заголовок 1</h1>
+        <h2>Заголовок 2</h2>
+        <h3>Заголовок 3</h3>
+        <h4>Заголовок 4</h4>
+        <h5>Заголовок 5</h5>
+        <h6>Заголовок 6</h6>
+        <p>Повседневная практика показывает, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. С другой стороны сложившаяся структура организации
+          требуют от нас анализа направлений прогрессивного развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении
+          поставленных задач. Равным образом укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.</p>
+        <p>Равным образом дальнейшее развитие различных форм деятельности играет важную роль в
+          <a href="#">формировании форм развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности требуют определения</a> прогрессивного развития. Товарищи! сложившаяся структура организации представляет собой
+          интересный эксперимент проверки модели развития. Задача организации, в особенности же реализация намеченных плановых заданий позволяет оценить значение форм развития. Разнообразный и богатый опыт реализация намеченных плановых заданий в значительной
+          степени обуславливает создание новых предложений.
+          <ol>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+            <li>Пункт 3</li>
+          </ol>
+          <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+            <li>Пункт 3</li>
+          </ul>
+        </p>
+      </div>
+    </section>
+    <!--end content-->
+    <div class="arr-up" id="arr-up"></div>
+    <!--begin footer-->
+    <footer class="footer" id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-top__item footer-top__item--brands">
+            <header class="footer-top__item-header">
+              <h3 class="footer-top__title">Бренды</h3>
+            </header>
+            <div class="footer-top__item-col">
+              <a class="footer-top__link" href="#">Вертимекс</a>
+              <a class="footer-top__link" href="#">Люфокс</a>
+              <a class="footer-top__link" href="#">Пелнум</a>
+              <a class="footer-top__link" href="#">Вертимекс</a>
+              <a class="footer-top__link" href="#">Люфокс</a>
+              <a class="footer-top__link" href="#">Пелнум</a>
+              <a class="footer-top__link" href="#">Люфокс</a>
+            </div>
+            <div class="footer-top__item-col">
+              <a class="footer-top__link" href="#">Вертимекс</a>
+              <a class="footer-top__link" href="#">Люфокс</a>
+              <a class="footer-top__link" href="#">Пелнум</a>
+              <a class="footer-top__link" href="#">Вертимекс</a>
+              <a class="footer-top__link" href="#">Люфокс</a>
+              <a class="footer-top__link" href="#">Пелнум</a>
+              <a class="footer-top__link" href="#">Люфокс</a>
+            </div>
+            <div class="footer-top__item-col">
+              <a class="footer-top__link" href="#">Вертимекс</a>
+              <a class="footer-top__link" href="#">Люфокс</a>
+              <a class="footer-top__link" href="#">Пелнум</a>
+              <a class="footer-top__link" href="#">Вертимекс</a>
+              <a class="footer-top__link" href="#">Люфокс</a>
+              <a class="footer-top__link" href="#">Пелнум</a>
+              <a class="footer-top__link" href="#">Люфокс</a>
+            </div>
+          </div>
+          <div class="footer-top__item footer-top__item--directions">
+            <header class="footer-top__item-header">
+              <h3 class="footer-top__title">Направления</h3>
+            </header>
+            <div class="footer-top__item-col">
+              <a class="footer-top__link" href="#">Комплектующие для закладки сада, ягодника на шпалере</a>
+              <a class="footer-top__link" href="#">Элитные саженцы</a>
+              <a class="footer-top__link" href="#">Техника для садов и ягодников</a>
+              <a class="footer-top__link" href="#">Регуляторы роста растений</a>
+              <a class="footer-top__link" href="#">Защита сада и ягодника от града и заморозков</a>
+            </div>
+            <div class="footer-top__item-col">
+              <a class="footer-top__link" href="#">Капельное орошение</a>
+              <a class="footer-top__link" href="#">Оборудование для сбора и переработки фундука и грецкого ореха</a>
+              <a class="footer-top__link" href="#">Переработка и хранение урожая</a>
+              <a class="footer-top__link" href="#">Оборудование для изготовления соков прямого отжима, сидра, пюре, джемов</a>
+            </div>
+          </div>
+          <div class="footer-top__item footer-top__item--contacts">
+            <a class="footer-top__link-phone" href="tel:+380443333345">+380 44 333 33 45</a>
+            <a class="footer-top__link-phone" href="tel:+380675055121">+380 67 505 51 21</a>
+            <a class="footer-top__link-phone" href="tel:+380674472020">+380 67 447 20 20</a>
+            <a class="footer-top__link-adress" href="https://goo.gl/maps/UeKf7qHqEG12" target="_blank" rel="nofollow noopener noreferrer">вул. Генерала Наумова, 1,
+              <br>оф. 107, Україна, Київ, 03164</a>
+            <a class="footer-top__link-mail" href="mailto:eft.ukraine@gmail.com">eft.ukraine@gmail.com</a>
+            <button class="btn button--wayra footer-top__btn">напишите нам</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom__copyright">
+            <span>© EFT Group - Все права защищены</span>
+          </div>
+          <div class="footer-bottom__copyright">
+            <span>Сайт разработан:</span>
+            <a href="#">Mostofdesign</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--end footer-->
+  </body>
+</html>
