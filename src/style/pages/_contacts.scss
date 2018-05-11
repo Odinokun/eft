@@ -49,6 +49,11 @@
   @include max(1000) {
     width: 100%;
   }
+  &:hover {
+    .contacts-item__links  a {
+      color: $highlight;
+    }
+  }
 }
 .contacts-item__icon {
   flex: none;
@@ -66,6 +71,7 @@
     font-size: 14px;
     line-height: 21px;
     display: block;
+    transition: color .5s;
     text-decoration: none;
     opacity: .7;
     color: #0f0f0f;

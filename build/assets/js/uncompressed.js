@@ -70,6 +70,11 @@ $('.product-slider__item--video').on('click', function () {
   $(this).addClass('active');
 });
 
+$('.directions-filter__btn').on('click', function () {
+  $('.directions-filter').addClass('active');
+  $(this).addClass('hidden');
+});
+
 
 // begin slider in product.html
 // отображаем общее кол-во слайдов
@@ -93,4 +98,15 @@ $('#product-slider').slick({
   dotsClass: 'custom_paging'
 });
 // end   slider in product.html
+
+//begin popup
+$('.popup-open').on('click', function() {
+  $('.popup__layer').fadeIn();
+});
+// end popup open
+
+// begin popup close
+$('.popup__close').on('click', function() {
+  $('.popup__layer').fadeOut();
+});
 //====== Begin Programmer code ======

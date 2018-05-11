@@ -105,6 +105,11 @@
   flex: none;
   width: 64px;
   height: 64px;
+  &:hover {
+    svg{
+      transform: scale(1.4);
+    }
+  }
   background-color: $highlight;
 
   input {
@@ -114,6 +119,7 @@
     opacity: 0;
   }
   svg {
+    transition: transform .5s;
     position: absolute;
     top: 0;
     right: 0;

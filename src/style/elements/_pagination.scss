@@ -19,6 +19,7 @@
   justify-content: center;
   width: 38px;
   height: 38px;
+  transition: .5s;
   margin: 0;
   list-style: none;
   text-align: center;
@@ -29,6 +30,7 @@
   &:last-child {
     border-right: 1px solid #cfcdc6;
   }
+  &:hover,
   &.active {
   border-right: 1px solid transparent;
     border-left: 1px solid transparent;

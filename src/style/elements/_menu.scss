@@ -79,6 +79,7 @@
   & > span {
     width: 10px;
     height: 7px;
+    margin-left: -15px;
 
     @include max(1000) {
       margin-left: 20px;
@@ -152,9 +153,6 @@
   text-transform: uppercase;
   color: #0f0f0f;
 
-  @include max(1270) {
-    padding: 0 15px;
-  }
   @include max(1100) {
     padding: 0 10px;
   }
@@ -198,7 +196,14 @@
     opacity: 1 !important;
     background-color: #fff;
   }
-
+  .menu__sublink {
+    text-decoration: none;
+    color: #0f0f0f;
+    transition: color .5s;
+    &:hover {
+      color: $highlight;
+    }
+  }
   .burger {
     margin-right: 25px;
 
@@ -310,8 +315,6 @@
   .menu__sublink {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color: #0f0f0f;
   }
   .menu__sublink-text {
     font-size: 14px;

@@ -1,10 +1,16 @@
 //begin popup
-button.popup-open popup open
 .popup__layer
   .popup
-    h3.popup__title Popup title
-    form.popup__form
-      input.popup__input(type="text" placeholder="Ваше имя")
-      input.popup__input(type="text" placeholder="Ваше имя")
-      button.popup__btn Кнопуля
+    .popup__close
+      svg
+        use(xlink:href="assets/img/sprite.svg#close")
+    h3.popup__title Обращайтесь к нам по любому вопросу
+    form.popup-form
+      input(name='name' placeholder='Имя').popup-form__input
+      input(name='phone' placeholder='Телефон').popup-form__input
+      input(name='email' placeholder='E-mail').popup-form__input
+      input(name='quest' placeholder='Напишите тут свой вопрос').popup-form__input
+      span.btn.button--wayra.popup-form__input-btn
+        input(type='submit' value='отправить сообщение').popup-form__input-submit
+    //end   contacts-map-sec
 //end popup

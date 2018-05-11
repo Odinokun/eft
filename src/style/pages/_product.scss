@@ -1,6 +1,20 @@
 .product-page {
   position: relative;
 }
+.product-top,
+.product-tech,
+.product-interes {
+  padding-left: 130px;
+  @include max(1100) {
+    padding-left: 60px;
+  }
+  @include max(730) {
+    padding-left: 10px;
+  }
+  @include max(550) {
+    padding-left: 0;
+  }
+}
 .product-top {
   display: flex;
   margin-bottom: 60px;
@@ -9,9 +23,27 @@
     flex-wrap: wrap;
   }
 }
+.product-page__left-title {
+  font-size: 14px;
+  position: absolute;
+  top: 210px;
+  left: -82px;
+  width: 290px;
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  opacity: .5;
+  color: #0f0f0f;
+
+  @include max(1100) {
+    //left: -10px;
+  }
+  @include max(730) {
+    display: none;
+  }
+}
 .product-top__left {
   width: 100%;
-  padding-right: 150px;
+  padding-right: 100px;
 
   @include max(1000) {
     margin-bottom: 30px;
@@ -251,39 +283,52 @@
 .product-tech__list-wrap {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 .product-tech__list {
   width: 50%;
   max-width: 450px;
   margin: 0;
   padding: 0 50px 0 15px;
+
   @include max(550) {
     width: 100%;
     margin-left: 10px;
   }
 }
 .product-tech__item {
+  font-size: 14px;
   padding: 5px 0 5px 20px;
   list-style-image: url('../img/ul.png');
-  font-size: 14px;
   color: #757574;
 }
 
-.product-interes{
+.product-interes {
   display: flex;
+  flex-wrap: wrap;
+
   @include max(730) {
-    flex-wrap: wrap;
     justify-content: space-around;
   }
 }
+.product-interes__header {
+  width: 100%;
+}
+.product-interes__header-title {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-transform: none;
+  color: #0f0f0f;
+}
 .product-interes__item {
-  text-decoration: none;
-  margin-right: 50px;
   width: 33.33%;
   max-width: 290px;
+  margin-right: 50px;
   margin-bottom: 30px;
+  text-decoration: none;
   background-color: #fff;
+
   @include max(800) {
     margin-right: 20px;
   }
@@ -294,7 +339,7 @@
   @include max(480) {
     width: 100%;
   }
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   }
 }
@@ -306,16 +351,16 @@
 }
 .product-interes__title {
   font-size: 14px;
-  text-transform: uppercase;
   font-weight: 700;
-  color: #000000;
+  text-transform: uppercase;
+  color: #000;
 }
 .product-interes__text {
   padding: 20px 30px 10px 30px;
   p {
     font-size: 14px;
+    line-height: 21px;
     opacity: .7;
     color: #0f0f0f;
-    line-height: 21px;
   }
 }

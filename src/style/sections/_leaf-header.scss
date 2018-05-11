@@ -2,7 +2,14 @@
   position: relative;
   max-width: 1600px;
   margin: 0 auto;
+  .breadcrumbs {
+    @include max(730) {
+      display: none;
+    }
+  }
 }
+
+
 .leaf-header-decor {
   position: absolute;
   width: 11px;
@@ -45,6 +52,9 @@
   max-width: 1600px;
   min-height: 410px;
   background-repeat: no-repeat;
+  @include max(730) {
+    min-height: auto;
+  }
   &::before {
     content: '';
     width: 100%;
@@ -81,6 +91,8 @@
   padding-bottom: 40px;
   @include max(730) {
     max-width: 100%;
+    min-height: auto;
+    padding: 20px 0 10px 0;
   }
   p {
     color: #ffffff;
@@ -94,7 +106,8 @@
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 20px;
-  @include max(700) {
+  @include max(730) {
     font-size: 28px;
+    text-align: center;
   }
 }
