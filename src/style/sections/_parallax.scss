@@ -45,6 +45,13 @@
   max-width: 1600px;
   height: 635px;
   background-color: #b1d4e7;
+  @include max(550) {
+    height: 550px;
+    background-image: url('../img/parallax-mobile.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 .parallax__cloud {
   position: absolute;
@@ -54,6 +61,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  @include max(550) {
+    display: none !important;
+  }
 }
 .parallax__cloud-01 {
   top: -100px !important;
@@ -157,6 +167,9 @@
   }
 }
 .parallax__bg--landscape {
+  @include max(550) {
+    display: none !important;
+  }
   .parallax__bg-inn {
     width: 110%;
     transform: translate(-5%, -30px);
@@ -166,12 +179,18 @@
   }
 }
 .parallax__bg--main {
+  @include max(550) {
+    display: none !important;
+  }
   .parallax__bg-inn {
     background-image: url('../img/parallax/parallax-main.png');
     background-position: 50% 50%;
   }
 }
 .parallax__bg--leaf {
+  @include max(550) {
+    display: none !important;
+  }
   .parallax__bg-inn {
     width: 110%;
     transform: translate(-5%, 90px);
@@ -181,6 +200,9 @@
   }
 }
 .parallax__bg--title {
+  @include max(550) {
+    display: none !important;
+  }
   .parallax__bg-inn {
     text-align: center;
   }

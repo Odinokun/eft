@@ -34,9 +34,6 @@
   opacity: .5;
   color: #0f0f0f;
 
-  @include max(1100) {
-    //left: -10px;
-  }
   @include max(730) {
     display: none;
   }

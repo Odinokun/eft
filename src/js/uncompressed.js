@@ -109,4 +109,6 @@ $('.popup-open').on('click', function() {
 $('.popup__close').on('click', function() {
   $('.popup__layer').fadeOut();
 });
+
+
 //====== Begin Programmer code ======

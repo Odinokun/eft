@@ -5,8 +5,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-
-display: none;
+  display: none;
   background-color: rgba(0, 0, 0, .7);
 }
 .popup {
@@ -19,6 +18,13 @@ display: none;
   padding: 35px 120px;
   transform: translate(-50%, -50%);
   background-color: #f9f8f7;
+
+  @include max(700) {
+    padding: 35px 50px;
+  }
+  @include max(425) {
+    padding: 20px 10px;
+  }
 }
 .popup__close {
   position: absolute;
@@ -27,6 +33,11 @@ display: none;
   width: 13px;
   height: 13px;
   cursor: pointer;
+
+  @include max(425) {
+    top: 10px;
+    right: 10px;
+  }
   &:hover {
     svg {
       transform: rotate(360deg);
@@ -46,13 +57,17 @@ display: none;
   max-width: 280px;
   margin-bottom: 30px;
   color: #0f0f0f;
+
+  @include max(480) {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
 }
 .popup-form {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
-  //max-width: 415px;
 }
 .popup-form__input {
   font-size: 14px;
@@ -65,7 +80,8 @@ display: none;
   border-bottom: 1px solid #ccccce;
   border-left: none;
   background-color: transparent;
-@include placeholder-color(#0f0f0f);
+
+  @include placeholder-color(#0f0f0f);
 }
 .popup-form__input-btn {
   width: auto;
@@ -75,6 +91,10 @@ display: none;
   padding-left: 30px;
   text-align: center;
   border: 1px solid rgba(67, 172, 52, .3);
+
+  @include max(480) {
+    margin-top: 10px;
+  }
   &:hover {
     border-color: $highlight;
     .popup-form__input-submit {
