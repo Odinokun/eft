@@ -50,7 +50,7 @@
   overflow: hidden;
   width: 100%;
   max-width: 1600px;
-  min-height: 410px;
+  height: 410px;
   background-repeat: no-repeat;
   @include max(730) {
     min-height: auto;
@@ -88,11 +88,13 @@
   flex-direction: column;
   justify-content: center;
   min-height: 360px;
-  padding-bottom: 40px;
+  margin-top: -30px;
   @include max(730) {
     max-width: 100%;
-    min-height: auto;
+    //min-height: auto;
     padding: 20px 0 10px 0;
+    margin-top: 0;
+    text-align: center;
   }
   p {
     color: #ffffff;
@@ -107,7 +109,9 @@
   line-height: 1.2;
   margin-bottom: 20px;
   @include max(730) {
-    font-size: 28px;
     text-align: center;
+  }
+  @include max(550) {
+    font-size: 28px;
   }
 }

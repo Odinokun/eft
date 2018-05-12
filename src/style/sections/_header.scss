@@ -29,6 +29,8 @@
 }
 .header-logo {
   margin-right: auto;
+  position: relative;
+  z-index: 1;
 
   @include max(480) {
     order: -2;

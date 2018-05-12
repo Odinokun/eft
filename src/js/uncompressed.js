@@ -72,7 +72,7 @@ $('.product-slider__item--video').on('click', function () {
 
 $('.directions-filter__btn').on('click', function () {
   $('.directions-filter').addClass('active');
-  $(this).addClass('hidden');
+  $(this).fadeOut(0);
 });
 
 

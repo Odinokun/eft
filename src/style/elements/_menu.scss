@@ -26,7 +26,6 @@
   padding: 0;
   background-color: #f9f8f7;
 
-
   @include max(1000) {
     flex-direction: column;
     padding-top: 50px;
@@ -65,15 +64,7 @@
       }
     }
     .menu__sublist {
-      transform: scale(1);
-      pointer-events: auto;
-      opacity: 1;
-
-      @include max(1000) {
-        transform: scale(0);
-        pointer-events: none;
-        opacity: 0;
-      }
+      transform: translate(0);
     }
   }
   & > span {
@@ -94,9 +85,9 @@
   }
   .menu__link {
     position: relative;
-    @include max(1100) {
 
-    padding-right: 5px;
+    @include max(1100) {
+      padding-right: 5px;
     }
     &::before {
       position: absolute;
@@ -168,6 +159,7 @@
 // begin submenu
 .menu__sublist {
   position: absolute;
+  z-index: -1;
   top: 100%;
   right: 0;
   left: 0;
@@ -179,8 +171,8 @@
   max-width: 1280px;
   margin: auto;
   list-style: none;
-  transition: .5s;
-  transform: translateX(0%) scale(0);
+  transition: transform .5s;
+  transform: translateY(-150%);
   pointer-events: none;
   background-color: #fff;
 
@@ -197,9 +189,9 @@
     background-color: #fff;
   }
   .menu__sublink {
+    transition: color .5s;
     text-decoration: none;
     color: #0f0f0f;
-    transition: color .5s;
     &:hover {
       color: $highlight;
     }
@@ -225,7 +217,7 @@
 // begin submenu--brands
 .menu__sublist--brands {
   padding: 30px 10px 35px 30px;
-  opacity: 0;
+  //opacity: 0;
 
   @include max(1000) {
     z-index: 10;
@@ -293,10 +285,10 @@
 .menu__sublist--delivery {
   justify-content: center;
   padding: 40px 10px 25px 30px;
+
   @include max(730) {
     justify-content: flex-start;
   }
-
   @include max(1000) {
     z-index: 10;
     padding: 60px 20px 20px 60px;
@@ -305,6 +297,7 @@
     width: 33.33%;
     max-width: 325px;
     margin-bottom: 30px;
+
     @include max(730) {
       width: 50%;
     }

@@ -19,15 +19,23 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png">
     <!-- end favicon block end-->
     <style>
+      .index-top-section {
+        overflow: hidden
+      }
+
       .preloader {
-        position: fixed;
+        position: absolute;
         z-index: 100;
         top: 0;
-        right: 0;
+        right: -25vw;
         bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh
+        left: -25vw;
+        width: 150vw;
+        height: 640px
+      }
+
+      .preloader.hide::after {
+        animation: preloaderHide 1s ease-in-out forwards
       }
 
       .preloader::after,
@@ -48,17 +56,25 @@
 
       .preloader::after {
         transform: translateX(-100%);
-        animation: preloader 2s .6s ease-in-out forwards;
+        animation: preloader 1s .6s ease-in-out forwards;
         background-color: #43ac34
       }
 
       @keyframes preloader {
-        0%,
-        100% {
+        0% {
           transform: translateX(-100%)
         }
-        50% {
+        100% {
           transform: translateX(0)
+        }
+      }
+
+      @keyframes preloaderHide {
+        0% {
+          transform: translateX(0)
+        }
+        100% {
+          transform: translateX(-100%)
         }
       }
 

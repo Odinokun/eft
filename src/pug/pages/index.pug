@@ -12,15 +12,17 @@ block variables
 
 block content
 
-  include ../elements/preloader
+  //include ../elements/preloader
   include ../sections/header
 
   //begin content
-  section.main
+  section.main.index
     include ../elements/waves
-    .container-lg
-      include ../sections/parallax
+    .index-top-section
+      .container-lg
+        include ../sections/parallax
 
+    .container-lg
       //begin about-sec
       section.about-sec#about-sec
         .container

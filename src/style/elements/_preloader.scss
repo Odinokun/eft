@@ -1,0 +1,51 @@
+//.index-top-section {
+//  overflow: hidden;
+//}
+//.preloader {
+//  position: absolute;
+//  z-index: 100;
+//  top: 0;
+//  right: -25vw;
+//  bottom: 0;
+//  left: -25vw;
+//  width: 150vw;
+//  height: 640px;
+//}
+//.preloader::after,
+//.preloader::before {
+//  position: absolute;
+//  top: 0;
+//  right: 0;
+//  bottom: 0;
+//  left: 0;
+//  margin: auto;
+//  content: '';
+//}
+//.preloader::after {
+//  transform: translateX(-100%);
+//  animation: preloader 1s .6s ease-in-out forwards;
+//  background-color: #43ac34;
+//}
+//.preloader::before {
+//  animation: preloaderOpacity .5s 1.6s ease-in-out forwards;
+//  background-color: #f9f8f7;
+//}
+//@keyframes preloader {
+//  0% {
+//    transform: translateX(-100%);
+//  }
+//  50% {
+//    transform: translateX(0);
+//  }
+//  100% {
+//    transform: translateX(-100%);
+//  }
+//}
+//@keyframes preloaderOpacity {
+//  0% {
+//    opacity: 1;
+//  }
+//  100% {
+//    opacity: 0;
+//  }
+//}
