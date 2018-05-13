@@ -1,51 +1,93 @@
-//.index-top-section {
-//  overflow: hidden;
-//}
-//.preloader {
-//  position: absolute;
-//  z-index: 100;
-//  top: 0;
-//  right: -25vw;
-//  bottom: 0;
-//  left: -25vw;
-//  width: 150vw;
-//  height: 640px;
-//}
-//.preloader::after,
-//.preloader::before {
-//  position: absolute;
-//  top: 0;
-//  right: 0;
-//  bottom: 0;
-//  left: 0;
-//  margin: auto;
-//  content: '';
-//}
-//.preloader::after {
-//  transform: translateX(-100%);
-//  animation: preloader 1s .6s ease-in-out forwards;
-//  background-color: #43ac34;
-//}
-//.preloader::before {
-//  animation: preloaderOpacity .5s 1.6s ease-in-out forwards;
-//  background-color: #f9f8f7;
-//}
-//@keyframes preloader {
-//  0% {
-//    transform: translateX(-100%);
-//  }
-//  50% {
-//    transform: translateX(0);
-//  }
-//  100% {
-//    transform: translateX(-100%);
-//  }
-//}
-//@keyframes preloaderOpacity {
-//  0% {
-//    opacity: 1;
-//  }
-//  100% {
-//    opacity: 0;
-//  }
-//}
+.index-top-section {
+  position: relative;
+  overflow: hidden;
+}
+.preloader {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 640px;
+  background-color: #43ac34;
+}
+@media (max-width: 550px) {
+  .preloader {
+    height: 550px;
+  }
+}
+.preloader-icon {
+  width: 90%;
+  max-width: 380px;
+}
+.preloader-icon  svg {
+  width: 100%;
+  height: 70px;
+
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 2px;
+}
+.st0 {
+  cursor: pointer;
+  transition: .5s;
+  animation: logoDash 1.5s linear forwards;
+  animation-delay: 1s;
+
+  fill: transparent;
+  stroke-linecap: square;
+  stroke-dasharray: 997;
+  stroke-dashoffset: 997;
+}
+.let {
+  animation: logoOpacity .5s 1.5s linear forwards;
+  opacity: 0;
+
+  fill: transparent;
+}
+.let-01 {
+  animation: logoOpacity .5s 2.1s linear forwards;
+}
+.let-02 {
+  animation: logoOpacity .5s 2s linear forwards;
+}
+.let-03 {
+  animation: logoOpacity .5s 1.9s linear forwards;
+}
+.let-04 {
+  animation: logoOpacity .5s 1.8s linear forwards;
+}
+.let-05 {
+  animation: logoOpacity .5s 1.7s linear forwards;
+}
+.let-06 {
+  animation: logoOpacity .5s 1.6s linear forwards;
+}
+.let-07 {
+  animation: logoOpacity .5s 1.5s linear forwards;
+}
+.let-08 {
+  animation: logoOpacity .5s 1.4s linear forwards;
+}
+
+@keyframes logoDash {
+  from {
+    stroke-dashoffset: 997;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes logoOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
