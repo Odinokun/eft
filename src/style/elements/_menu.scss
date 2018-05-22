@@ -65,6 +65,7 @@
     }
     .menu__sublist {
       transform: translate(0);
+      pointer-events: auto;
     }
   }
   & > span {
